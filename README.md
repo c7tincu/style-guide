@@ -9,9 +9,6 @@ Front-End Development Style Guide
   1. [Types](#types)
   * [Objects](#objects)
   * [Arrays](#arrays)
-
-
-
 * [CSS](#css)
 
 
