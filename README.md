@@ -93,7 +93,7 @@ for (var index = 0, length = foo.length; index < length; ++index) {
 ```javascript
 var someFunction = () => {
   var args = Array.prototype.slice.call(arguments);
-}
+};
 ```
 
 :boom: For zero-length & one-element _Array_ literals, use one line of code. Otherwise, split lines:
