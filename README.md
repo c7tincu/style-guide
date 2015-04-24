@@ -25,12 +25,11 @@ Front-End Development Style Guide
 
 * We use the literal syntax to create _Objects_:
 
-:+1:
 ```javascript
+// GOOD:
 var foo = {};
-```
-:-1:
-```javascript
+
+// BAD:
 var foo = new Object();
 ```
 
@@ -54,34 +53,31 @@ var someObject = {
 
 * We use the literal syntax to create _Arrays_:
 
-:+1:
 ```javascript
+// GOOD:
 var foo = [];
-```
-:-1:
-```javascript
+
+// BAD:
 var foo = new Array();
 ```
 
 * We use `Array#push()` to add items to an _Array_:
 
-:+1:
 ```javascript
+// GOOD:
 foo.push('bar');
-```
-:-1:
-```javascript
+
+// BAD:
 foo[foo.length] = 'bar';
 ```
 
 * To copy an _Array_, we use `Array#slice()`:
 
-:+1:
 ```javascript
+// GOOD:
 var fooCopy = foo.slice();
-```
-:-1:
-```javascript
+
+// BAD:
 var fooCopy = [];
 for (var index = 0, length = foo.length; index < length; ++index) {
   fooCopy[index] = foo[index];
@@ -112,15 +108,14 @@ var someArray = [
 
 * We don’t allow trailing commas for arrays:
 
-:+1:
 ```javascript
+// GOOD:
 var someArray = [
   'foo',
   'bar'
 ];
-```
-:-1:
-```javascript
+
+// BAD:
 var someArray = [
   'foo',
   'bar',
