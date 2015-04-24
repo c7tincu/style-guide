@@ -5,14 +5,14 @@ Front-End Development Style Guide
 
 ## Table of Contents
 
-1. [JS](#JS)
-  1. [Types](#Types)
-  * [Objects](#Objects)
-  * [Arrays](#Arrays)
+1. [JS](#js)
+  1. [Types](#types)
+  * [Objects](#objects)
+  * [Arrays](#arrays)
 
 
 
-* [CSS](#CSS)
+* [CSS](#css)
 
 
 
@@ -39,7 +39,7 @@ var foo = new Object();
 
 * There’s no need for us to avoid reserved words for _Object_ keys.
 
-* For empty & one-property `Object` literals, we use one line. Otherwise, we split lines:
+* For empty & one-property _Object_ literals, we use one line. Otherwise, we split lines:
 
 ```javascript
 var foo = {};
@@ -99,7 +99,7 @@ var someFunction = () => {
 }
 ```
 
-* For zero-length & one-element `Array` literals, we use one line. Otherwise, we split lines:
+* For zero-length & one-element _Array_ literals, we use one line. Otherwise, we split lines:
 
 ```javascript
 var foo = [];
