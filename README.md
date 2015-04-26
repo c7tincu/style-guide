@@ -10,6 +10,8 @@ Front-End Development Style Guide
   * [Objects](#objects)
   * [Arrays](#arrays)
   * [Strings](#strings)
+  * [Functions](#functions)
+  * [Properties](#properties)
 * [CSS](#css)
 
 
@@ -94,6 +96,7 @@ for (var index = 0, length = foo.length; index < length; ++index) {
 ```javascript
 var someFunction = () => {
   var args = Array.prototype.slice.call(arguments);
+  // ...
 };
 ```
 
@@ -144,6 +147,84 @@ var foo = 'The twins of Mammon quarrelled. Their warring plunged the world into 
 ```
 
 :boom: :warning: Don’t strive to programmatically build up a _String_ with `Array#join()`, if that would negatively impact readability.
+
+
+
+### Functions
+
+
+
+:boom: Use only _Function_ expressions, never _Function_ statements. Use ES6’s _fat arrow_ notation for _Function_ expressions, whenever possible:
+
+```javascript
+// GOOD:
+var square = (x) => {
+  return x * x;
+};
+var cube = function() { // Note there’s no space between `function` and `()`.
+  return x * x * x;
+};
+
+// BAD:
+function someFunction() {
+  // ...
+}
+```
+
+:boom: :lipstick: Use the `(...)(...)` notation for IIFEs instead of `(...(...))`:
+
+```javascript
+// GOOD:
+(() => {
+  // ...
+})();
+(function($) {
+  // ...
+})(jQuery);
+
+// BAD:
+(function($) {
+  // ...
+}(jQuery));
+```
+
+:boom: Never name a _Function_ parameter `arguments`. That’ll take precedence over the `arguments` _Object_ that’s given to every _Function_ scope.
+
+
+
+### Properties
+
+:boom: Use the dot notation when accessing properties, and the subscript notation only when accessing properties with a variable or a reserved word:
+
+```javascript
+// GOOD:
+var foo = {
+  bar: 'baz',
+  'class': false
+};
+var barProperty = 'bar';
+if (foo['class']) {
+  console.log(foo.bar);
+  foo[barProperty] = 'foobarbaz';
+}
+
+// BAD:
+if (foo.class) {
+  console.log(foo['bar']);
+}
+```
+
+:boom: Use ES6’s shorthand notation for _Function_ properties, whenever possible:
+```javascript
+var someMixin = {
+  getDefaultProperties() {
+    // ...
+  },
+  fooMethod(bar, baz) {
+    // ...
+  }
+};
+```
 
 
 
