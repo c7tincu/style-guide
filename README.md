@@ -9,6 +9,7 @@ Front-End Development Style Guide
   1. [Types](#types)
   * [Objects](#objects)
   * [Arrays](#arrays)
+  * [Strings](#strings)
 * [CSS](#css)
 
 
@@ -127,4 +128,25 @@ var someArray = [
 ```
 
 
+
+### Strings
+
+
+
+:boom: Use single quotes for _Strings_:
+
+:boom: Write _Strings_ longer than 100 characters on multiple lines, using concatenation:
+
+```javascript
+var foo = 'The twins of Mammon quarrelled. Their warring plunged the world into a new darkness, and the beast ' +
+  'abhorred the darkness. So it began to move swiftly, and grew more powerful, and went forth and ' +
+  'multiplied. And the beasts brought fire and light to the darkness.';
+```
+
+:boom: :warning: Don’t strive to programmatically build up a _String_ with `Array#join()`, if that would negatively impact readability.
+
+
+
 ## CSS
+
+...
