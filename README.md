@@ -104,7 +104,7 @@ var someFunction = () => {
 
 ```javascript
 var foo = [];
-var bar = [ 'baz' ];
+var bar = [ 'baz' ]; // Note the spaces inside the square brackets.
 var someArray = [
   'foo',
   'bar',
