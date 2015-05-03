@@ -18,7 +18,7 @@ Front-End Development Style Guide
 
 ## JS
 
-This JS Style Guide is based on [Airbnb’s](https://github.com/airbnb/javascript) (as of late April 2015), but it aims to be more thorough. Also, where my opinions are considerably different from (or even opposed to) the given reference, a “:warning:” icon indicates that. Moreover, a “:lipstick:” icon indicates cosmetical preferences.
+This JS Style Guide is based on [Airbnb’s ES5 Style Guide](https://github.com/airbnb/javascript/tree/master/es5) (as of late April 2015), but it aims to be more thorough. Also, where my opinions are considerably different from (or even opposed to) the given reference, a “:warning:” icon indicates that. Moreover, a “:lipstick:” icon indicates cosmetical preferences.
 
 
 
